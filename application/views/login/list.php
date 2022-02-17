@@ -75,7 +75,6 @@
                 </div>
                 <!-- /.col -->
             </div>
-
             <?php echo form_close(); ?>
         </div>
         <!-- /.login-box-body -->

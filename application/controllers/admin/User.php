@@ -142,7 +142,7 @@ class User extends CI_Controller
     }
 
     //Delete user
-    public function delete($id_user)
+    public function hapus($id_user)
     {
         $data = array('id_user' =>  $id_user);
         $this->user_model->delete($data);

@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.4
+-- version 5.1.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 13, 2021 at 02:24 PM
--- Server version: 10.4.17-MariaDB
--- PHP Version: 7.4.14
+-- Generation Time: Feb 08, 2022 at 03:32 AM
+-- Server version: 10.4.19-MariaDB
+-- PHP Version: 8.0.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -160,7 +160,7 @@ CREATE TABLE `konfigurasi` (
 --
 
 INSERT INTO `konfigurasi` (`id_konfigurasi`, `namaweb`, `tagline`, `email`, `website`, `keywords`, `metatext`, `telepon`, `alamat`, `facebook`, `instagram`, `deskripsi`, `logo`, `icon`, `rekening_pembayaran`, `tanggal_update`) VALUES
-(1, 'Republic', 'You Are Gantlemen', 'hidayatr1234@gmail.com', 'http://toko-online.com', 'republic, sepatu, fashion  ', 'ok             ', '082122222222', 'Kp. Baru', 'https://www.facebook.com/rahmat.hidayatt.779/', 'https://www.instagram.com/hidayat_r78/', ' Republic berawal dari mimpi seorang anak muda yang gelisah melihat banyaknya brand fashion yang melakukan mark up harga terlalu tinggi sehingga membuat harga tidak terjangkau, sehingga terciptalah cita - cita menciptakan solusi tampil tampan dengan harga terjangkau bagi pria pria muda Indonesia. Dimulai dari pertengahan tahun 2014 dengan sangat sederhana dan hanya bermodalkan keberanian, Republic hadir membawa misi untuk ikut bertanggung jawab menjadikan setiap pria Indonesia memiliki sikap gentlemen dengan konten - konten edukasi pria di berbagai media sosialnya dan jurnal Republic di website. Inilah 3 value utama dari brand Republic yang ingin disampaikan ke setiap gentlemen seluruh Indonesia. Menjadi brand yang dipercaya oleh setiap stakeholders internal dan eksternal kami (trustworthy), memberikan informasi dan edukasi sebagai seorang pria (gentlemen) dan merasakan pengalaman berbeda memiliki produk terbaik negeri dengan kombinasi estetika dan kenyamanan (prestigious). ', 'gambar.png', 'logo881.jpg', 'ok             ', '2021-04-13 12:23:41');
+(1, 'Rahmat', 'You Are Gantlemen', 'hidayatr1234@gmail.com', 'http://toko-online.com', 'republic, sepatu, fashion   ', 'ok              ', '082122222222', 'Kp. Baru', 'https://www.facebook.com/rahmat.hidayatt.779/', 'https://www.instagram.com/hidayat_r78/', ' Republic berawal dari mimpi seorang anak muda yang gelisah melihat banyaknya brand fashion yang melakukan mark up harga terlalu tinggi sehingga membuat harga tidak terjangkau, sehingga terciptalah cita - cita menciptakan solusi tampil tampan dengan harga terjangkau bagi pria pria muda Indonesia. Dimulai dari pertengahan tahun 2014 dengan sangat sederhana dan hanya bermodalkan keberanian, Republic hadir membawa misi untuk ikut bertanggung jawab menjadikan setiap pria Indonesia memiliki sikap gentlemen dengan konten - konten edukasi pria di berbagai media sosialnya dan jurnal Republic di website. Inilah 3 value utama dari brand Republic yang ingin disampaikan ke setiap gentlemen seluruh Indonesia. Menjadi brand yang dipercaya oleh setiap stakeholders internal dan eksternal kami (trustworthy), memberikan informasi dan edukasi sebagai seorang pria (gentlemen) dan merasakan pengalaman berbeda memiliki produk terbaik negeri dengan kombinasi estetika dan kenyamanan (prestigious).  ', 'gambar.png', 'logo881.jpg', 'ok              ', '2021-05-24 15:21:28');
 
 -- --------------------------------------------------------
 
@@ -417,7 +417,8 @@ ALTER TABLE `transaksi`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id_user`),
-  ADD UNIQUE KEY `username` (`username`);
+  ADD UNIQUE KEY `username` (`username`),
+  ADD KEY `username_2` (`username`);
 
 --
 -- AUTO_INCREMENT for dumped tables

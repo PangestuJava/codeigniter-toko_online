@@ -15,7 +15,7 @@ class Produk extends CI_Controller
 
     //Data Produk
     public function index()
-    { 
+    {
         $produk = $this->produk_model->listing();
 
         $data = array(
@@ -133,7 +133,6 @@ class Produk extends CI_Controller
             $this->load->library('upload', $config);
 
             if (!$this->upload->do_upload('gambar')) {
-
                 $data = array(
                     'title'             => 'Tambah Produk',
                     'kategori'          => $kategori,
@@ -141,11 +140,9 @@ class Produk extends CI_Controller
                     'isi'               => 'admin/produk/tambah'
                 );
                 $this->load->view('admin/layout/wrapper', $data, false);
-
                 //Masukan Database
             } else {
                 $upload_gambar   = array('upload_data' => $this->upload->data());
-
                 //create thumnail gambar
                 $config['image_library']    = 'gd2';
                 $config['source_image']     = './assets/upload/image/' . $upload_gambar['upload_data']['file_name'];
